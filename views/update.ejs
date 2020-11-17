@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .card {
+            margin-right: 300px;
+            margin-left: 300px;
+            margin-top: 100px;
+            background-color: pink;
+            width: 50%;
+        }
+
+        #title {
+            margin-left: 25px;
+
+        }
+
+        label {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+        }
+
+        input {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border-radius: 5px;
+        }
+
+        .btn1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: cyan;
+            width: 100px;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../static/img/background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <div class="card  w-30 ">
+            <div class="card-header  "
+                style="color:blue;font-size:30px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                UPDATE TO DO LIST
+            </div>
+            <div class="card-body">
+                <form method="post" action='/update/<%=todoItem._id%>' class="mt-5 ">
+                    <div>
+                        <label for="TITLE" id="title">UPDATE TITLE:</label>
+                        <input name="title" type="text" placeholder="ADD TITLE" class="label"
+                            value=" <%= todoItem.title%>">
+                    </div>
+                    <div>
+                        <label for="ACTIVITY">UPDATE ACTIVITY:</label>
+                        <input name="activity" type="text" placeholder="ADD ACTIVITY" class="label1"
+                            value=" <%= todoItem.activity%>">
+                    </div>
+                    <input type="submit" class="btn1" value="ADD">
+                </form>
+            </div>
+        </div>
+
+    </center>
+
+
+</body>
+
+</html>
